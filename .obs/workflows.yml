@@ -1,10 +1,5 @@
 workflow:
   steps:
-    - set_flags:
-        flags:
-          - type: build
-            status: enable
-            project: home:gmacedo:rancher:images-test
     - branch_package:
         source_project: home:gmacedo:rancher
         source_package: shell
