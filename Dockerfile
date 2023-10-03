@@ -43,7 +43,6 @@ RUN mkdir /home/shell/.kube && \
 
 RUN chmod 700 /run
 
-RUN ls -lha
 COPY helm-cmd /usr/local/bin/
 COPY welcome /usr/local/bin/
 COPY kustomize.sh /home/shell/
