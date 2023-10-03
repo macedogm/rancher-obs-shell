@@ -1,12 +1,14 @@
 workflow:
   steps:
-    - rebuild_package:
-        project: home:gmacedo:rancher
-        package: shell
-#    - branch_package:
-#        source_project: home:gmacedo:rancher
-#        source_package: shell
-#        target_project: home:gmacedo:rancher:images-test
+    - set_flags:
+        flags:
+          - type: build
+            status: enable
+            project: home:gmacedo:rancher:images-test
+    - branch_package:
+        source_project: home:gmacedo:rancher
+        source_package: shell
+        target_project: home:gmacedo:rancher:images-test
   filters:
     event: pull_request
 rebuild_master:
