@@ -1,4 +1,5 @@
-#!BuildTag: home:gmacedo:rancher/shell:latest
+#BuildTag: home:gmacedo:rancher/shell:latest
+#!BuildTag: shell:latest
 
 FROM opensuse/tumbleweed:latest
 #FROM registry.suse.com/bci/bci-base:15.5
