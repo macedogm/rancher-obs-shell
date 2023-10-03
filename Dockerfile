@@ -1,5 +1,5 @@
-#BuildTag: home:gmacedo:rancher/shell:latest
-#!BuildTag: home:gmacedo:rancher:images-test:macedogm:rancher-obs-shell:PR-8/shell:latest
+#!BuildTag: rancher/shell:latest
+#!ExclusiveArch x86_64
 
 FROM opensuse/tumbleweed:latest
 #FROM registry.suse.com/bci/bci-base:15.5
