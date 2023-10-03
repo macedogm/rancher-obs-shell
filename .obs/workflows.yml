@@ -3,7 +3,7 @@ workflow:
     - branch_package:
         source_project: home:gmacedo:rancher
         source_package: shell
-        target_project: home:gmacedo:rancher:images-test
+        target_project: home:gmacedo:rancher:test-images
   filters:
     event: pull_request
 rebuild_master:
