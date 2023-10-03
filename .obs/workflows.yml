@@ -6,3 +6,10 @@ workflow:
         target_project: home:gmacedo:rancher:images-test
   filters:
     event: pull_request
+rebuild_master:
+  steps:
+    - rebuild_package:
+        project: home:gmacedo:rancher
+        package: shell
+  filters:
+    event: push
