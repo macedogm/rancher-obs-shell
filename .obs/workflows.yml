@@ -13,7 +13,4 @@ rebuild_master:
         project: home:gmacedo:rancher
         package: shell
   filters:
-    branches:
-      only:
-        - main
     event: push
