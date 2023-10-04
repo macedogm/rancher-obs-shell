@@ -43,9 +43,9 @@ RUN mkdir /home/shell/.kube && \
 
 RUN chmod 700 /run
 
-COPY package/helm-cmd /usr/local/bin/
-COPY package/welcome /usr/local/bin/
-COPY package/kustomize.sh /home/"$user"
+COPY --chmod=755 package/helm-cmd /usr/local/bin/
+COPY --chmod=755 package/welcome /usr/local/bin/
+COPY --chmod=755 package/kustomize.sh /home/"$user"
 
 USER "$userid"
 
