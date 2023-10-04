@@ -52,3 +52,4 @@ USER "$userid"
 WORKDIR /home/"$user"
 
 CMD ["welcome"]
+
