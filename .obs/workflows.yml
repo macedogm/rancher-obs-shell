@@ -3,13 +3,13 @@ workflow:
     - branch_package:
         source_project: home:gmacedo:rancher
         source_package: shell
-        target_project: home:gmacedo:rancher:test-images
+        target_project: home:gmacedo:rancher:dev
   filters:
     event: pull_request
-rebuild_master:
-  steps:
-    - rebuild_package:
-        project: home:gmacedo:rancher
-        package: shell
-  filters:
-    event: push
+#rebuild_master:
+#  steps:
+#    - rebuild_package:
+#        project: home:gmacedo:rancher
+#        package: shell
+#  filters:
+#    event: push
