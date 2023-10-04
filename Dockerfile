@@ -47,8 +47,6 @@ COPY helm-cmd /usr/local/bin/
 COPY welcome /usr/local/bin/
 COPY kustomize.sh /home/shell/
 
-RUN ls -lha
-
 USER "$userid"
 
 WORKDIR /home/shell
