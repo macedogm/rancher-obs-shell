@@ -1,4 +1,4 @@
-workflow:
+prs:
   steps:
     - branch_package:
         source_project: home:gmacedo:rancher
@@ -7,10 +7,13 @@ workflow:
   filters:
     event: pull_request
 
-rebuild_master:
+main:
   steps:
     - rebuild_package:
         project: home:gmacedo:rancher
         package: shell
   filters:
     event: push
+    branches:
+      only:
+        - main
