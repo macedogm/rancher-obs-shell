@@ -1,8 +1,7 @@
 #!BuildTag: shell:latest
 
-#FROM opensuse/tumbleweed:latest
-#FROM registry.suse.com/bci/bci-base:15.5
-FROM opensuse/bci/bci-base:latest
+FROM opensuse/tumbleweed:latest
+#FROM opensuse/bci/bci-base:latest
 
 ARG user=shell
 ARG userid=1000
