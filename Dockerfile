@@ -3,10 +3,6 @@
 FROM opensuse/tumbleweed:latest
 #FROM opensuse/bci/bci-base:latest
 
-COPY ./package/helm-cmd /usr/local/bin/
-COPY package/welcome /usr/local/bin/
-COPY ./package/kustomize.sh /home/shell/
-
 ARG user=shell
 ARG userid=1000
 
@@ -47,14 +43,12 @@ RUN mkdir /home/shell/.kube && \
 
 RUN chmod 700 /run
 
-RUN pwd
-
-COPY helm-cmd /usr/local/bin/
-COPY welcome /usr/local/bin/
-COPY kustomize.sh /home/shell/
+COPY package/helm-cmd /usr/local/bin/
+COPY package/welcome /usr/local/bin/
+COPY package/kustomize.sh /home/"$user"
 
 USER "$userid"
 
-WORKDIR /home/shell
+WORKDIR /home/"$user"
 
 CMD ["welcome"]
