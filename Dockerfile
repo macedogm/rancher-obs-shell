@@ -2,8 +2,6 @@
 
 #FROM opensuse/tumbleweed:latest
 #FROM opensuse/bci/bci-base:latest
-FROM bci/bci-micro:15.5 as builder
-
 FROM bci/bci-base:15.5
 
 ARG user=shell
