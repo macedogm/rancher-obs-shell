@@ -4,6 +4,7 @@ FROM bci/bci-base:15.5
 
 RUN zypper -n up
 RUN zypper -n in --no-recommends bash-completion gzip jq tar unzip vim wget
+RUN ls -la
 
 ARG user=shell
 ARG userid=1000
