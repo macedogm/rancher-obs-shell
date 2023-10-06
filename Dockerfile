@@ -1,11 +1,6 @@
 #!BuildTag: shell:latest
 
-#FROM bci/bci-base:15.5
-FROM bci/bci-base:latest
-
-RUN zypper -n up
-RUN zypper -n in --no-recommends bash-completion gzip jq tar unzip vim wget
-RUN ls -la
+FROM bci/bci-base:15.5
 
 ARG user=shell
 ARG userid=1000
