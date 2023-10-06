@@ -26,7 +26,7 @@ RUN zypper -n in helm"$RANCHER_HELM_FORK_VERSION"
 
 # Install RPMs already available in OpenSUSE
 RUN zypper -n in -f k9s #-"$K9S_VERSION"
-RUN zypper -n in -f kubernetes"$KUBECTL_VERSION"-client
+#RUN zypper -n in -f kubernetes"$KUBECTL_VERSION"-client
 RUN zypper -n in -f kustomize #-"$KUSTOMIZE_VERSION"
 
 RUN zypper -n up
