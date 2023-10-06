@@ -2,6 +2,9 @@
 
 FROM bci/bci-base:15.5
 
+RUN zypper -n up
+RUN zypper -n in --no-recommends bash-completion gzip jq tar unzip vim wget
+
 ARG user=shell
 ARG userid=1000
 
@@ -15,7 +18,8 @@ ENV RANCHER_HELM_FORK_VERSION 3.12
 
 # Install RPM of Rancher's Helm fork
 ARG RANCHER_OBS_REPO=rancher-obs-repo
-RUN zypper ar https://download.opensuse.org/repositories/home:gmacedo:rancher:deps/openSUSE_Tumbleweed/ "$RANCHER_OBS_REPO"
+#RUN zypper ar https://download.opensuse.org/repositories/home:gmacedo:rancher:deps/openSUSE_Tumbleweed/ "$RANCHER_OBS_REPO"
+RUN zypper ar https://download.opensuse.org/repositories/home:gmacedo:rancher:deps/bci/ "$RANCHER_OBS_REPO"
 RUN zypper --gpg-auto-import-keys ref -f
 RUN zypper -n in helm"$RANCHER_HELM_FORK_VERSION"
 
